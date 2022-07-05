@@ -1,3 +1,3 @@
-# atweb-sicepatfood
+# web-serenityjs-webdriverio
 
-Web Automation Test Sicepat Food
+Web Automation Test

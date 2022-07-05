@@ -1,0 +1,36 @@
+{
+    "compilerOptions": {
+      "outDir": "./build",
+      "allowJs": true,
+      "target": "es2019",
+      "module": "commonjs",
+      "removeComments": true,
+      "noImplicitAny": false,
+      "strictPropertyInitialization": true,
+      "strictNullChecks": true,
+      "esModuleInterop": true,
+      "types": [
+        "node",
+        "webdriverio/sync",
+        "@wdio/cucumber-framework",
+        "expect-webdriverio",
+        "@wdio/sauce-service"
+      ],
+      "baseUrl": ".",
+      "paths": {
+        "@interactions": ["./screenplay/interactions/index.ts"],
+        "@abilities": ["./screenplay/abilities/index.ts"],
+        "@tasks": ["./screenplay/tasks/index.ts"],
+        "@actors": ["./screenplay/actors/index.ts"],
+        "@helpers": ["./helpers.ts"],
+        "@assertions": ["./screenplay/assertions/index.ts"]
+      }
+    },
+    "include": [
+      "./**/*.ts"
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
+  

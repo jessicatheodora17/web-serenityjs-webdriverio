@@ -1,0 +1,74 @@
+{
+  "name": "web-serenityjs-webdriverio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "typings": "./typings",
+  "scripts": {
+    "postinstall": "serenity-bdd update",
+    "clean": "rimraf target",
+    "test": "failsafe clean test:execute test:report",
+    "test:execute": "wdio config/wdio.conf.ts",
+    "test:report": "serenity-bdd run --features ./features",
+    "lint": "eslint --ext ts --config .eslintrc.js .",
+    "lint:fix": "npm run lint -- --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessicatheodora17/web-serenityjs-webdriverio.git"
+  },
+  "keywords": [
+    "serenity-js",
+    "bdd",
+    "cucumber",
+    "testing",
+    "webdriverio"
+  ],
+  "author": "Jessica Theodora",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessicatheodora17/web-serenityjs-webdriverio/issues"
+  },
+  "homepage": "https://github.com/jessicatheodora17/web-serenityjs-webdriverio#readme",
+  "engines": {
+    "node": "^12 || ^14 || ^16",
+    "npm": "^6 || ^7"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.3.1",
+    "@serenity-js/assertions": "^2.31.0",
+    "@serenity-js/console-reporter": "^2.31.0",
+    "@serenity-js/core": "^2.31.0",
+    "@serenity-js/cucumber": "^2.31.0",
+    "@serenity-js/rest": "^2.31.0",
+    "@serenity-js/serenity-bdd": "^2.31.0",
+    "@serenity-js/webdriverio": "^2.31.0",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "@wdio/appium-service": "^7.14.1",
+    "@wdio/cli": "^7.10.1",
+    "@wdio/cucumber-framework": "^7.10.1",
+    "@wdio/local-runner": "^7.10.1",
+    "@wdio/sauce-service": "^7.16.13",
+    "@wdio/spec-reporter": "^7.10.1",
+    "@wdio/utils": "^7.19.5",
+    "appium": "^1.22.0",
+    "chromedriver": "^103.0.0",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unicorn": "^35.0.0",
+    "eslint-plugin-unused-imports": "^1.1.4",
+    "expect-webdriverio": "^3.1.1",
+    "geckodriver": "^3.0.1",
+    "is-ci": "^3.0.0",
+    "npm-failsafe": "^0.4.3",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.2.1",
+    "tsconfig-paths": "^3.11.0",
+    "typescript": "^4.3.5",
+    "wdio-chromedriver-service": "^7.2.0",
+    "wdio-geckodriver-service": "^2.1.0"
+  }
+}
